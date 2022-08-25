@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on Lua tutorial</title><link>https://martinkunc.github.io/lua-tutorial/docs/</link><description>Recent content in Introduction on Lua tutorial</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://martinkunc.github.io/lua-tutorial/docs/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://martinkunc.github.io/lua-tutorial/docs/01-introduction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/01-introduction/</guid><description>Introduction
+#
+Lua is a simple and lightweight procedural language with automatic memory management. Because of its simplicity it could be learned in a week.
+Variables
+#
+Variable is a simple container for values. It can be assigned a value with = operator. Special value for empty value is nil, which signifies no value. For efficiency, you might want to assign nil to variable after its use to remove its previous value.</description></item><item><title/><link>https://martinkunc.github.io/lua-tutorial/docs/02-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/02-types/</guid><description>Lua variable types
+#
+Lua is dynamically typed language, so any variable will have type based on value assigned to it.
+Lua has eight basic types: number, string, boolean, table, userdata, function, thread and nil.
+Numbers can be whole numbers or numbers floating point numbers. Booleans can be either true or false. String values are created with either double or single quotation marks.
+s = &amp;#34;Hello Lua&amp;#34; print(s) b = 3.</description></item></channel></rss>
