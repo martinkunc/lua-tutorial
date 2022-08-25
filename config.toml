@@ -1,0 +1,7 @@
+baseURL = 'https://martinkunc.github.io/lua-tutorial/'
+languageCode = 'en-us'
+title = 'Lua tutorial'
+theme = 'hugo-book'
+
+[params]
+BookMenuBundle = '/menu'

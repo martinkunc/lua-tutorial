@@ -1,0 +1,54 @@
+
+
+<script src="/js/lua.vm.js"></script>
+<link rel="stylesheet" href="/css/codemirror.css">
+<script src="/js/codemirror.js"></script>
+<link rel="stylesheet" href="/css/styles.css">
+<script src="/js/lua.js"></script>
+<script src="/js/luacode.js"></script>
+
+<div class="grid-container">
+    <div class="grid-item">
+    <textarea class="editor" >{{ .Inner }}</textarea>
+    <div class="rowexecute">
+      <div class="execute">
+        <a href="#" class="executeButton">Execute &raquo;</a>
+      </div>
+    </div>
+    
+  </div>
+  <div class="grid-item">
+      <div class="output">
+          <pre class="outputText"></pre>
+      </div>
+  </div>
+  <script>attachCode(document.currentScript)</script>
+</div>
+
+<script>
+
+
+//     var myCodeMirror = CodeMirror.fromTextArea(document.getElementById('mytext'), {
+//     lineNumbers: true
+// });
+    //myCodeMirror.setSize(screen.width*0.6, screen.height*0.2);
+    
+    // Execution
+    // var outputElement = document.getElementById('output')
+    // emscripten.print = function(x) {
+    //   outputElement.textContent = (outputElement.textContent ? outputElement.textContent + '\n' : '') + x;
+    // }
+    
+    // function executeLua(code, clear) {
+    //   if (clear) {
+    //     outputElement.style.color = null;
+    //     outputElement.textContent = '';
+    //   }
+    //   try {
+    //     L.execute(code);
+    //   } catch(e) {
+    //     outputElement.style.color = "red";
+    //     outputElement.textContent = e.toString();
+    //   }
+    // }
+    </script>

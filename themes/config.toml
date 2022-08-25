@@ -1,0 +1,7 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Lua introduction'
+theme = 'hugo-book'
+
+[params]
+BookMenuBundle = '/menu'
