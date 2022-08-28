@@ -5,6 +5,6 @@ theme = 'hugo-book'
 publishDir = 'docs'
 
 [params]
-BookMenuBundle = '/menu'
+# BookMenuBundle = '/menu'
 
 BookToC = false

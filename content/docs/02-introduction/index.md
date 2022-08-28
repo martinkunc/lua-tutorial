@@ -1,8 +1,8 @@
 
-
-# Introduction
-
-Lua is a simple and lightweight procedural language with automatic memory management. Because of its simplicity it could be learned in a week.
+---
+weight: 2
+title: "02. Introduction"
+---
 
 ## Variables
 Variable is a simple container for values. It can be assigned a value with = operator.
@@ -24,4 +24,16 @@ A single statement doesn't have to end with a semicolon, but you can be use it s
 s = "Pi is"
 p = 3.14
 print(s, p)
+{{< /lua >}}
+
+## Comments
+Comments in Lua can be either single line, when a line starts with two dashes `--`.
+When a comments needs to span multiple lines, it can be placed among `--[[  ]]`.
+
+{{< lua >}}
+-- There wont be any output here
+--[[
+print("multiple")
+print("lines")
+]]
 {{< /lua >}}
