@@ -1,11 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction to LUA on Lua tutorial</title><link>https://martinkunc.github.io/lua-tutorial/</link><description>Recent content in Introduction to LUA on Lua tutorial</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://martinkunc.github.io/lua-tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://martinkunc.github.io/lua-tutorial/docs/01-introduction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/01-introduction/</guid><description>Introduction
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction to LUA on Lua tutorial</title><link>https://martinkunc.github.io/lua-tutorial/</link><description>Recent content in Introduction to LUA on Lua tutorial</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://martinkunc.github.io/lua-tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>01. Installation</title><link>https://martinkunc.github.io/lua-tutorial/docs/01-installation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/01-installation/</guid><description>Installing Lua interpreter
 #
-Lua is a simple and lightweight procedural language with automatic memory management. Because of its simplicity it could be learned in a week.
-Variables
+If you want a standalone Lua interpreter, you can install binary using any of these ways:
+To install Lua on MacOS
+brew install lua To install on Windows, you can download the installer from Lua for Windows: luaforwindows
+if you are using chocolatey, you can use unofficial version from it by typing:
+choco install lua To install on linux, the best is use your package manager.</description></item><item><title>02. Introduction</title><link>https://martinkunc.github.io/lua-tutorial/docs/02-introduction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/02-introduction/</guid><description>Variables
 #
-Variable is a simple container for values. It can be assigned a value with = operator. Special value for empty value is nil, which signifies no value. For efficiency, you might want to assign nil to variable after its use to remove its previous value.</description></item><item><title/><link>https://martinkunc.github.io/lua-tutorial/docs/02-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/02-types/</guid><description>Lua variable types
+Variable is a simple container for values. It can be assigned a value with = operator. Special value for empty value is nil, which signifies no value. For efficiency, you might want to assign nil to variable after its use to remove its previous value. s = &amp;#34;Hello Lua&amp;#34; a = 10 print(s, a) Execute &amp;raquo; Printing value of variables
+#
+Lua has few built-in functions. To print a numeric or string value or a variable we can use function print().</description></item><item><title>03. Types</title><link>https://martinkunc.github.io/lua-tutorial/docs/03-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/03-types/</guid><description>Lua variable types
 #
 Lua is dynamically typed language, so any variable will have type based on value assigned to it.
 Lua has eight basic types: number, string, boolean, table, userdata, function, thread and nil.
-Numbers can be whole numbers or numbers floating point numbers. Booleans can be either true or false. String values are created with either double or single quotation marks.
-s = &amp;#34;Hello Lua&amp;#34; print(s) b = 3.</description></item></channel></rss>
+Numbers
+#
+Numbers in Lua are only double precision floating point numbers, it doesn&amp;rsquo;t have integer numbers. Numbers can be specified also using scientifiec notation: print(3, 3.14, 314e-2) Execute &amp;raquo; Booleans
+#
+Booleans can be either true or false.</description></item><item><title>04. Chunks and require</title><link>https://martinkunc.github.io/lua-tutorial/docs/04-chunks-and-require/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/04-chunks-and-require/</guid><description>Code chunks
+#
+Lua executes its code in blocks of statements, called chunks. Lua interpreter can execute statement from interactive mode, or load the chunk from a file. Lua interpreter compiles the statements to a byte code, which is then executed.
+You can execute a statement directly as parameter of Lua interpreter using -e switch like this:
+lua -e &amp;#34;print(&amp;#39;Hello world&amp;#39;)&amp;#34; Lua chunk can be a file with .lua extension, created in any text editor.</description></item><item><title>05. String functions</title><link>https://martinkunc.github.io/lua-tutorial/docs/05-string-functions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/05-string-functions/</guid><description>Multiline string literals
+#
+To set even very long strings, the literal can be placed among two square brackets [[&amp;hellip;]]. html = [[ &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;Title&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; ]] print(html) Execute &amp;raquo; String conversion
+#
+Whenever a string is used in an expression together with a number, Lua will attempt to convert string to its numerical value so that expression could have been evaluated. When this is not expected, it can lead to misleading result.</description></item><item><title>06. Arrays and tables</title><link>https://martinkunc.github.io/lua-tutorial/docs/06-arrays/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/06-arrays/</guid><description>Lua Arrays
+#
+The Lua multi-purpose data type table is a base for Arrays. It is a collection of values with an index. To create a new array, we can use brackets {}. Arrays can grow dynamically, because they are based on tables. To set or get a value on a specific index, we use square brackets [] with index: [1] will return element at index 1 or nil if it doesn&amp;rsquo;t exist.</description></item><item><title>07. Functions, local and global scope</title><link>https://martinkunc.github.io/lua-tutorial/docs/07-functions-local-and-global-scope/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/07-functions-local-and-global-scope/</guid><description>Functions
+#
+Instead of repeating some code block, or calling a dofile multiple times, we can use a function, which is an abstraction to structure a block of code.
+These blocks are the same, except the variable n n = &amp;#34;Alice&amp;#34; s = &amp;#34;Hi, my name is &amp;#34; .. n print(s) n = &amp;#34;Bob&amp;#34; s = &amp;#34;Hi, my name is &amp;#34; .. n print(s) Execute &amp;raquo; It can be extracted into a function and give it a name SayHello and parameter n Because the functions contain multiple statements we need to use end keyword to indicate end of function.</description></item><item><title>08. Functions with multiple results</title><link>https://martinkunc.github.io/lua-tutorial/docs/08-functions-with-multiple-results/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/08-functions-with-multiple-results/</guid><description>Functions with multiple results
+#
+In Lua, function can return none, one, or even multiple return values. It is not the same as if function returns a table, here its results are stored directly to result variables after the call. For example hypothetical function to attempt to withdraw money could result in either whole amount, or just a portion of requested cash and an boolean indication that not whole requested value was returned.</description></item><item><title>9. Closures and Iterators</title><link>https://martinkunc.github.io/lua-tutorial/docs/09-closures-iterators/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/09-closures-iterators/</guid><description>Return function from a function
+#
+A function result can also be a new function. This could be usefull when I dont want to immediatelly execute some code, but instead just provide a mechanism to create customized function to be evaluated later in my code. Typically such a function doesn&amp;rsquo;t have name, its called anonymous.
+For example function makeCurrentTime returns a function, which has no parameters, and when called, it just returns what is in global string hardCodedTime.</description></item><item><title>10. Table Key value pairs</title><link>https://martinkunc.github.io/lua-tutorial/docs/10-table-key-value-pairs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/10-table-key-value-pairs/</guid><description>Key value pairs
+#
+We have mentioned that in table values are indexed by keys. Lua provides functions to return key and value from specific index as multiple results.
+Pairs and IPairs functions
+#
+The built-in functions pairs and ipairs works with tables. They provide iterators for all keys and values in the provided table.
+The key difference is that
+pairs provides actual key and value
+ipairs provides real index - a number on which index the value is in the table, but doesn&amp;rsquo;t provide the key.</description></item><item><title>11. Cycles for and while</title><link>https://martinkunc.github.io/lua-tutorial/docs/11-cycles-for-while-pairs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/11-cycles-for-while-pairs/</guid><description>Cycle structures
+#
+Similarly to other languages Lua has statement for controlling repetitive cycle which might have a variable to drive it and a condition at the beginning or end of the cycle.
+For cycle
+#
+Lua has two for types of cycles, numeric for and generic for.
+Numeric for cycle
+#
+To execute some statement several times, without for cycle we would need to declare variable with initial value, adjust the variable for next value up the the maximal range and execute the defined block.</description></item><item><title>12. Common standard libraries</title><link>https://martinkunc.github.io/lua-tutorial/docs/12-common-standard-libraries-copy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://martinkunc.github.io/lua-tutorial/docs/12-common-standard-libraries-copy/</guid><description>Preloaded libraries
+#
+String library
+#
+To set even very long strings, the literal can be placed among two square brackets [[&amp;hellip;]]. html = [[ &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;Title&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; ]] print(html) Execute &amp;raquo; String conversion
+#
+Whenever a string is used in an expression together with a number, Lua will attempt to convert string to its numerical value so that expression could have been evaluated. When this is not expected, it can lead to misleading result.</description></item></channel></rss>
