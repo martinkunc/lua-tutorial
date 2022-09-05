@@ -1,0 +1,83 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="If condition#To introduce logical decision to your Lua program, we can use if condition, which is very similar to how it works in other programming languages.
+Its basic form is
+if <condition> then statement end This form evaluates the condition, which can be logical or relational expression and when it is evaluated as true, executes one or more statements after then keyword.
+It might also have else branch, which has the form of:"><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="07. If condition and operators"><meta property="og:description" content="If condition#To introduce logical decision to your Lua program, we can use if condition, which is very similar to how it works in other programming languages.
+Its basic form is
+if <condition> then statement end This form evaluates the condition, which can be logical or relational expression and when it is evaluated as true, executes one or more statements after then keyword.
+It might also have else branch, which has the form of:"><meta property="og:type" content="article"><meta property="og:url" content="https://martinkunc.github.io/lua-tutorial/docs/07-if-condition-operators/"><meta property="article:section" content="docs"><title>07. If condition and operators | Lua tutorial</title><link rel=manifest href=/lua-tutorial/manifest.json><link rel=icon href=/lua-tutorial/favicon.png type=image/x-icon><link rel=stylesheet href=/lua-tutorial/book.min.c58292d36b18b675680ab9baea2029204537b839ea72f258746ec0f32ce8d6c8.css integrity="sha256-xYKS02sYtnVoCrm66iApIEU3uDnqcvJYdG7A8yzo1sg=" crossorigin=anonymous><script defer src=/lua-tutorial/flexsearch.min.js></script>
+<script defer src=/lua-tutorial/en.search.min.ac70413d1902211a5e9ddd055b0b1e33a261dab2aa9fa7814176408b1773acb9.js integrity="sha256-rHBBPRkCIRpend0FWwseM6Jh2rKqn6eBQXZAixdzrLk=" crossorigin=anonymous></script>
+<script src=https://martinkunc.github.io/lua-tutorial//js/lua.vm.js?1662349164></script>
+<link rel=stylesheet href=https://martinkunc.github.io/lua-tutorial//css/codemirror.css?1662349164><script src=https://martinkunc.github.io/lua-tutorial//js/codemirror.js?1662349164></script>
+<link rel=stylesheet href=https://martinkunc.github.io/lua-tutorial//css/styles.css?1662349164><script src=https://martinkunc.github.io/lua-tutorial//js/lua.js?1662349164></script>
+<script src=https://martinkunc.github.io/lua-tutorial//js/luacode.js?1662349164></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/lua-tutorial/><span>Lua tutorial</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/lua-tutorial/docs/01-installation/>01. Installation</a></li><li><a href=/lua-tutorial/docs/02-introduction/>02. Introduction</a></li><li><a href=/lua-tutorial/docs/03-types/>03. Types</a></li><li><a href=/lua-tutorial/docs/04-chunks-and-require/>04. Chunks and require</a></li><li><a href=/lua-tutorial/docs/05-string-functions/>05. String functions</a></li><li><a href=/lua-tutorial/docs/06-arrays/>06. Arrays and tables</a></li><li><a href=/lua-tutorial/docs/07-if-condition-operators/ class=active>07. If condition and operators</a></li><li><a href=/lua-tutorial/docs/08-functions-local-and-global-scope/>08. Functions, local and global scope</a></li><li><a href=/lua-tutorial/docs/09-functions-with-multiple-results/>09. Functions with multiple results</a></li><li><a href=/lua-tutorial/docs/10-closures-iterators/>10. Closures and Iterators</a></li><li><a href=/lua-tutorial/docs/11-table-key-value-pairs/>11. Table Key value pairs</a></li><li><a href=/lua-tutorial/docs/12-for-cycle/>12. For Cycle</a></li><li><a href=/lua-tutorial/docs/13-while-and-repeat-cycles/>13. While and repeat cycles</a></li><li><a href=/lua-tutorial/docs/15-common-standard-libraries-copy/>15. Common standard libraries</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/lua-tutorial/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>07. If condition and operators</strong>
+<label for=toc-control></label></div></header><article class=markdown><h3 id=if-condition>If condition
+<a class=anchor href=#if-condition>#</a></h3><p>To introduce logical decision to your Lua program, we can use if condition, which is very similar to how it works in other programming languages.</p><p>Its basic form is</p><pre tabindex=0><code>if &lt;condition&gt; then statement end
+</code></pre><p>This form evaluates the condition, which can be logical or relational expression and when it is evaluated as true, executes one or more statements after then keyword.</p><p>It might also have else branch, which has the form of:</p><pre tabindex=0><code>if &lt;condition&gt; then statement else other_statement end
+</code></pre><p>where the part after else is executed only when the condition is false.</p><p>And finally when we would need to evaluate multiple different cases, we could use elseif form in form format:</p><pre tabindex=0><code>if &lt;condition&gt; then 
+  statement 
+elseif &lt;another_condition&gt; 
+  other_statement 
+else
+  another_statement
+end
+</code></pre><p>This syntax will evaluate elseif branch when first condition didnt&rsquo; succeeded and when another_condition is true, executes its block. It might have multiple elseif branches (and their order is significant).
+Please note that multiple branches doesn&rsquo;t close with <code>end</code>, only the whole statement does.</p><p>Finally there can be only one else, which executes in all cases where if or elseif conditions weren&rsquo;t true.</p><h3 id=arithmetic-operators>Arithmetic operators
+<a class=anchor href=#arithmetic-operators>#</a></h3><p>To evaluate any arithmetic expression, we can use usual operators <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code> and unary <code>-</code>. Additionally, it has n-th power operator <code>^</code> used like <code>square = side^2</code> or <code>side = square^(1/2)</code> and obviously brackets. The precedences are following usual BIDMAS predecences.
+Additionally, Lua supports modulo, (the remainder after division) <code>%</code> with syntax <code>evenModulo = n%2</code> evaluating to 0 for even and 1 for odd n.</p><h3 id=relational-operators>Relational operators
+<a class=anchor href=#relational-operators>#</a></h3><p>Also usual relational operators <code>&lt;</code>, <code>></code>, <code>&lt;=</code>, <code>>=</code> are supported. Relational equals is <code>==</code> and not equals has unusual <code>~=</code>.</p><p>We can use relational operators with any types. If they don&rsquo;t match, Lua considers them not to be equal.</p><p>Special case is the <code>nil</code> type, which is not equal to anything except other <code>nil</code>.</p><p>When comparing two reference types like tables, userdata and functions, Lua compares their reference, so they are only equal if they points to the same object.</p><p>The strings are compared by alphabetical order (with currently set locale). Other types like tables, userdata and functions can only be compared for equality or nonequality.</p><p>Special cases are when comparing mixed types. For example <code>"1"==1</code> is false because of different types, and <code>"10"&lt;"2"</code> is true because it uses lexical comparism.</p><p>In contract to equals or non equals, which can be used to any types, Lua will result in an error when we attempt to use other relational operators, like <code>></code> or <code>&lt;</code> with incompatible types, like in this case: <code>"1" &lt; 2</code>.</p><h3 id=logical-operators>Logical operators
+<a class=anchor href=#logical-operators>#</a></h3><p>Lua has well know logical operators <code>and</code>, <code>or</code> and <code>not</code>. They behave differently based on context how they are used.</p><p>When they are used as logical expression (evaluating true or false values), they result in true or false, but then they are used as statements, they return values from left or right side based on result of the evaluation.</p><p><code>Not</code> has the highest precedence, <code>and</code> has lower precedence and <code>or</code> has it lowest.</p><p>The operator <code>and</code> when evaluated as non logical expression, returns its first argument when whole expression is false and when its true it returns the second argument.</p><p>The <code>or</code> operator when used as logical expression returns its first argument when the expression is not false, and when it is false, returns its second argument.</p><p>In Lua, <code>false</code> or <code>nil</code> are considered <code>false</code> and anything else is considered <code>true</code>.</p><div class=grid-container><div class=grid-item><textarea class=editor>
+if true and false then print(&#39;never prints&#39;) end
+if true then print(&#39;always prints&#39;) end
+
+-- false and anything is false
+-- so returns first argument false
+print(false and 123) 
+
+-- nil and anything is false
+-- so returns first argument nil
+print(nil and 123) 
+
+-- number and other number is true
+-- so returns second argument 2
+print(1 and 2) 
+
+-- false and anything is false
+-- so or returns second argument 2
+print(false or 2) 
+
+-- nil and anything is false
+-- so or returns second argument 2
+print(nil or 2) 
+
+-- anything else then nil or false is true
+-- so or returns first argument 1
+print(1 or 2) 
+
+</textarea><div class=rowexecute><div class=execute><a href=# class=executeButton>Execute &#187;</a></div></div></div><div class=grid-item><div class=output><pre class=outputText></pre></div></div><script>attachCode(document.currentScript)</script></div><p>Usual construction relying on <code>nil</code> being false is specifying default value using expression <code>value or default</code> if an variable has initial <code>nil</code> value with syntax:</p><div class=grid-container><div class=grid-item><textarea class=editor>
+-- nil or false are false
+a = nil
+v = a or 10
+print(v) -- prints 10
+
+a = false
+v = a or 10
+print(v) -- prints 10
+
+-- or of not false returns first argument
+a = 5
+v = a or 10
+print(v) -- prints 5
+</textarea><div class=rowexecute><div class=execute><a href=# class=executeButton>Execute &#187;</a></div></div></div><div class=grid-item><div class=output><pre class=outputText></pre></div></div><script>attachCode(document.currentScript)</script></div><p>Because anything else than nil or false is true, the actual expression
+<code>A and B</code> can be used to return B only when expression A is true.</p><p>The logical expression evaluation is also used for ternary operator in Lua.
+The idea is that expression <code>(a and b) or c</code> or because and has higher priority, it can be simplified as:</p><pre tabindex=0><code>a and b or c
+</code></pre><p>is an equivalent to</p><pre tabindex=0><code>a ? b : c
+</code></pre><p>for example:</p><pre tabindex=0><code>max = (x &gt; y) and x or y
+</code></pre><p>This is because <code>x > y</code> is boolean expression and <code>and</code> results in first argument (true or false) when any logical expression <code>and</code> anything results in first argument. That used as left side of <code>or</code> makes it return its left side (x here) when it is not false.</p><p>The <code>not</code> operator always results in true or false.</p><p>Example of <code>if</code> statement with multiple branches:</p><div class=grid-container><div class=grid-item><textarea class=editor>
+a = 18
+if a &lt; 18 then print(&#34;Teenager&#34;)
+elseif a &gt;= 18 and a &lt; 65 then print(&#34;Adult&#34;)
+else print (&#34;Senior person&#34;)
+end
+</textarea><div class=rowexecute><div class=execute><a href=# class=executeButton>Execute &#187;</a></div></div></div><div class=grid-item><div class=output><pre class=outputText></pre></div></div><script>attachCode(document.currentScript)</script></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>
