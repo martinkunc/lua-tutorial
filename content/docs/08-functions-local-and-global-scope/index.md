@@ -1,7 +1,7 @@
 
 ---
-weight: 7
-title: "07. Functions, local and global scope"
+weight: 8
+title: "08. Functions, local and global scope"
 ---
 
 ## Functions

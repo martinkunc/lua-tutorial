@@ -1,7 +1,7 @@
 
 ---
-weight: 8
-title: "08. Functions with multiple results"
+weight: 9
+title: "09. Functions with multiple results"
 ---
 
 ## Functions with multiple results

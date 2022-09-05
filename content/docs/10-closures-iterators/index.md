@@ -1,7 +1,7 @@
 
 ---
-weight: 9
-title: "9. Closures and Iterators"
+weight: 10
+title: "10. Closures and Iterators"
 ---
 
 ## Return function from a function
@@ -58,4 +58,4 @@ print("calling endlessIncreaser() ", increaser())
 
 Iterator is an interestring function, which could provide next value from a table, sequence, or based on completelly customized logic. In its nature it is abstraction which allows write even more complex way how to provide next value, which can be later reused by other code more easily.
 Iterators in Lua are functions, which based on passed state generate next state.
-For example endlessIncreaser used above is already an iterator. Later in [chapter 11-cycles-for-while-pairs/](/lua-tutorial/docs/11-cycles-for-while-pairs/) we will see concise way how to consume values created by iterators.
+For example endlessIncreaser used above is already an iterator. Later in [chapter 12-cycles-for-while-pairs/](/lua-tutorial/docs/12-cycles-for-while-pairs/) we will see concise way how to consume values created by iterators.
