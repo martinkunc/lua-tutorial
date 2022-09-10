@@ -57,3 +57,36 @@ repeat
 until a <= 0
 print("Factorial of "..n.." is "..b)
 {{< /lua >}}
+
+
+## Break and return
+If we want to exit from currently executing function, we can use `return`, which may return a result, however it is not required at the end of a function.
+
+Occasionally we have a need to finish the cycles `for`, `while` or `repeat` before the whole block finishes.
+We can use `break` statement, which exits the current block and continues right after it.
+
+There is an important difference from other programming languages, that `break` or `return` can only be used as a last statement in the block before end. If we want however to finish a block in the middle, we have to place the `break` inside an extra `do` `break` `end` block.
+
+This example will find a number in an array and breaks the `repeat` cycle when it does. Try to change n to something not in the array.
+
+{{< lua >}}
+function findnumber(n, numbers)
+  local a = 0
+  repeat
+    if numbers[a] == n then 
+      break 
+    end
+    a = a + 1
+  until a > #numbers
+  return a
+end
+
+local n = 5
+local numbers = {4, 5, 7, 10}
+i = findnumber(n, numbers)
+if i > #numbers then 
+  print("Number "..n.." hasn't been found")
+else
+  print("The number "..n.." is at "..i.."th position")
+end
+{{< /lua >}}
